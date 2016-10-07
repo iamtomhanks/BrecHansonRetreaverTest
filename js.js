@@ -10,8 +10,8 @@ function querySubmit() {
 		CustomAlert.render("Special characters are not allowed. Please enter a query containing only alphanumeric characters.");
 		return false;
 	} else {
-
-		var ajax = ajaxObj("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyAetqmg_37I_bmtIoLSKoZl-6onjzhP5fs&cx=012015028700958926860:cft8ol-tsua&searchType=image&q=cars+glamour+shot");
+		var sanitizedQuery = query.replace(" ", "+");
+		var ajax = ajaxObj("GET", "https://www.googleapis.com/customsearch/v1?key=AIzaSyAetqmg_37I_bmtIoLSKoZl-6onjzhP5fs&cx=012015028700958926860:cft8ol-tsua&searchType=image&q="+sanitizedQuery+"+glamour+shot");
 
 		ajax.onreadystatechange = function() {
 			if (ajaxReturn(ajax) == true) {
@@ -20,10 +20,7 @@ function querySubmit() {
 					//CustomAlert.render(ajax.responseText);
 					var item = result.items[0];
 					document.getElementById("image-result").src = item.image.thumbnailLink;	
-					
-					for(){
-						
-					}								
+												
 				}
 			}
 		};
