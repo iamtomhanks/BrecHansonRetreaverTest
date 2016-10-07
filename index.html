@@ -2,9 +2,35 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css">
-		<script src="js.js"></script>
+		
 
 	</head>
 
-	<body></body>
+	<body>
+		<div id="dialogoverlay"></div>
+		<div id="dialogbox">
+		  <div>
+		    <div id="dialogboxhead"></div>
+		    <div id="dialogboxbody"></div>
+		    <div id="dialogboxfoot"></div>
+		  </div>
+		</div>
+		<div id="logo">
+			<img src="logo.png" alt="retreaver" title="retreaver"/>
+		</div>
+		
+		<div id="main-container">
+			<h2>Please enter an image query</h2>
+			<form name="query-form" onsubmit="return querySubmit()">
+				<input type="text" id="query-input" name="query-input"/>
+				<button id="form-submit-button">SUBMIT</button>
+			</form>
+			<div id="image-result-container">
+				<img id="image-result"/>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js.js"></script>
+		<script src="ajax.js"></script>
+	</body>
 </html>

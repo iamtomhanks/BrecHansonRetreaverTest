@@ -1,0 +1,147 @@
+@font-face {
+	font-family: 'Fira';
+	src: url('FiraSans-Regular.otf') format('otf'), /* Chrome 26+, Opera 23+ */
+	url('FiraSans-Regular.otf') format('otf'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'FiraLight';
+	src: url('FiraSans-Light.otf') format('otf'), /* Chrome 26+, Opera 23+ */
+	url('FiraSans-Regular.otf') format('otf'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+	font-family: 'Nevis';
+	src: url('nevis.woff') format('woff2'), /* Chrome 26+, Opera 23+ */
+	url('nevis.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-size: 16px;
+}
+
+body{
+	background: url('bg.jpg');
+	background-position: 0% 0%;
+	font-family: "FiraLight";
+}
+#logo{
+	width: 15%;
+	margin-left: 8%;
+	margin-top: 3%;
+	display: inline-block;
+}
+#logo img{
+	width: 100%;
+	display: block;
+}
+
+#main-container{
+	width: 50%;
+	margin: 0 auto;
+	background: none;
+}
+#main-container h2{	
+	font-weight: 400;
+	color: #F2F4F5;
+	text-align: center;
+}
+#main-container input{
+	width: 100%;		
+	border: none;
+	background: none;
+	border-bottom: 2px solid #F2F4F5;
+	font-size: 1.5em;
+	padding-left: .5em;
+	cursor: pointer;
+}
+#main-container #form-submit-button{
+	background:#4AC4F6;
+	width: 50%;
+	margin: 2em auto;
+	padding: 1em 0;
+	border: none;
+	display: block;
+	cursor: pointer;
+	font-family: Nevis;
+	font-size: 1.4em;
+}
+#main-container input:focus{
+	outline: none;
+}
+
+
+
+#main-container #image-result-container{
+	width: 25%;
+	margin: 0 auto;
+}
+
+#main-container #image-result-container img{
+	width: 100%;
+	display: block;
+}
+
+/*CUSTOM POPUP MODAL START*/
+#dialogoverlay {
+	display: none;
+	opacity: .8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	background: #FFF;
+	width: 100%;
+	z-index: 151;
+}
+
+
+#dialogbox {
+	display: none;
+	position: fixed;
+	background: #283032;
+	top: 35%;
+	left: 30%;
+	width: 40%;
+	z-index: 151;
+	cursor: default;
+}
+
+#dialogbox div {
+
+	margin: 8px;
+}
+#dialogbox div #dialogboxhead {
+	text-align: center;
+	font-size: 1.2em;
+	margin: 1% 0;
+	color: #4AC4F6;
+	font-family: Nevis;
+}
+#dialogbox div #dialogboxbody {
+	text-align: center;
+	font-size: 1em;
+	margin: 5% 0;
+	color: #FFF;
+	font-family: "Georgia", serif;
+}
+
+#dialogbox div #dialogboxfoot {
+	overflow: hidden;
+	margin: 1% 0;
+}
+
+#dialogbox button {
+	width: 40%;
+	margin: 0% 30%;
+	background: #4AC4F6;
+	color: #283032;
+	border: none;
+	font-size: 1.2em;
+	padding: 1% 0;
+	cursor: pointer;
+}
+
+/*CUSTOM POPUP MODAL END*/
